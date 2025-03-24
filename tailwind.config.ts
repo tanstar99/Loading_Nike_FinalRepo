@@ -33,6 +33,16 @@ export default {
 					red: '#FF0000',
 					black: '#111111',
 					gray: '#f5f5f5',
+					vibrant: {
+						red: '#E30B16',
+						orange: '#FF6B00',
+						green: '#BCED3F',
+						blue: '#00B2FF',
+						purple: '#9B30FF',
+						pink: '#FF3E96',
+						yellow: '#FFD700',
+						teal: '#078080'
+					}
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
