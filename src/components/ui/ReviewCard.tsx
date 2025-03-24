@@ -54,7 +54,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
           cardRef.current = el;
           if (typeof targetRef === 'function') {
             targetRef(el);
-          } else if (targetRef) {
+          } else if (targetRef && 'current' in targetRef) {
             targetRef.current = el;
           }
         }
