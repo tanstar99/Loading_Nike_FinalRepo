@@ -106,7 +106,7 @@ const ProductCard3D: React.FC<ProductCard3DProps> = ({
   return (
     <div 
       ref={cardRef}
-      className="product-card group cursor-pointer perspective-1000 transform-style-3d"
+      className="product-card group cursor-pointer perspective-1000 transform-style-3d hoverable"
       onClick={handleClick}
       onMouseMove={handleCardMouseMove}
       onMouseLeave={handleCardMouseLeave}
@@ -119,7 +119,7 @@ const ProductCard3D: React.FC<ProductCard3DProps> = ({
         )}
         <div className="absolute top-4 right-4 z-10 flex space-x-2">
           <button 
-            className="bg-white rounded-full p-2 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
+            className="bg-white rounded-full p-2 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hoverable"
             onClick={(e) => {
               e.stopPropagation();
               // Add to favorites logic
@@ -128,19 +128,19 @@ const ProductCard3D: React.FC<ProductCard3DProps> = ({
             <Heart className="w-4 h-4 text-gray-700 hover:text-nike-red transition-colors" />
           </button>
           <button 
-            className={`bg-white rounded-full p-2 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ${isRotating ? 'bg-nike-red text-white' : ''}`}
+            className={`bg-white rounded-full p-2 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hoverable ${isRotating ? 'bg-nike-red text-white' : ''}`}
             onClick={toggleRotation}
           >
             <RotateCcw className="w-4 h-4" />
           </button>
           <button 
-            className="bg-white rounded-full p-2 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
+            className="bg-white rounded-full p-2 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hoverable"
             onClick={zoomIn}
           >
             <ZoomIn className="w-4 h-4" />
           </button>
           <button 
-            className="bg-white rounded-full p-2 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
+            className="bg-white rounded-full p-2 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hoverable"
             onClick={zoomOut}
           >
             <ZoomIn className="w-4 h-4 rotate-180" />
@@ -149,7 +149,7 @@ const ProductCard3D: React.FC<ProductCard3DProps> = ({
         <img 
           src={image} 
           alt={name} 
-          className="product-image w-full h-full object-cover transition-all duration-300"
+          className="product-image w-full h-full object-cover transition-all duration-300 hoverable"
           style={{ 
             transform: `scale(${scale}) rotate(${rotation}deg)`,
           }}
