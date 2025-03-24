@@ -1,6 +1,8 @@
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Star } from 'lucide-react';
+import { gsap } from 'gsap';
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
 interface ReviewCardProps {
   name: string;
@@ -8,6 +10,7 @@ interface ReviewCardProps {
   rating: number;
   comment: string;
   avatar?: string;
+  delay?: number;
 }
 
 const ReviewCard: React.FC<ReviewCardProps> = ({
@@ -15,10 +18,49 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   date,
   rating,
   comment,
-  avatar
+  avatar,
+  delay = 0
 }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const { targetRef, isIntersecting } = useIntersectionObserver({
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    const card = cardRef.current;
+    if (isIntersecting && card) {
+      gsap.fromTo(
+        card,
+        { 
+          opacity: 0, 
+          y: 30,
+        },
+        { 
+          opacity: 1, 
+          y: 0, 
+          duration: 0.8,
+          delay: delay,
+          ease: "power3.out"
+        }
+      );
+    }
+  }, [isIntersecting, delay]);
+
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+    <div 
+      ref={(el) => {
+        // Assign to both refs
+        if (el) {
+          cardRef.current = el;
+          if (typeof targetRef === 'function') {
+            targetRef(el);
+          } else if (targetRef) {
+            targetRef.current = el;
+          }
+        }
+      }}
+      className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 opacity-0"
+    >
       <div className="flex items-center mb-4">
         <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-gray-200">
           {avatar ? (
