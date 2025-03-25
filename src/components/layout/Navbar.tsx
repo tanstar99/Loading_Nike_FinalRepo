@@ -32,7 +32,8 @@ const Navbar = () => {
     { name: 'Shirts', path: '/shirts' },
     { name: 'Bottles', path: '/bottles' },
     { name: 'Accessories', path: '/accessories' },
-    { name: 'AR/VR', path: '/ar-vr' }
+    { name: 'AR/VR', path: '/ar-vr' },
+    { name: 'Shoe Generator', path: '/generator' },
   ];
 
   return (

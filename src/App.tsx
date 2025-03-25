@@ -13,6 +13,7 @@ import Accessories from "./pages/Accessories";
 import ArVr from "./pages/ArVr";
 import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
+import ShoeGenerator from "./pages/ShoeGenerator";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/bottles" element={<Bottles />} />
           <Route path="/accessories" element={<Accessories />} />
           <Route path="/ar-vr" element={<ArVr />} />
+          <Route path="/generator" element={<ShoeGenerator />} />
           <Route path="/shoes/:productId" element={<ProductDetail />} />
           <Route path="/shirts/:productId" element={<ProductDetail />} />
           <Route path="/bottles/:productId" element={<ProductDetail />} />

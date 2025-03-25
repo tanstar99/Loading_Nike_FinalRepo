@@ -34,7 +34,7 @@ const productData = {
     ],
     sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
     mainImage: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/5e4c1ce1-b014-4bf2-8edc-8ef6a3068e25/air-max-270-shoes-2V5C4p.png',
-    model: '/3d-models/NikeAM270.glb', // Add 3D model path
+    model: '/3d-models/NikeAM270.glb',
     images: [
       'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/5e4c1ce1-b014-4bf2-8edc-8ef6a3068e25/air-max-270-shoes-2V5C4p.png',
       'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/4f37fca4-6d7e-43c1-b342-9f1d14ef0a4a/air-max-270-shoes-2V5C4p.png',
@@ -69,6 +69,87 @@ const productData = {
       'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/7d30b089-f598-4749-92a6-269e4ef8298d/air-force-1-07-shoes-WrLlWX.png',
       'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/5a176ae7-dc1c-46cf-a9f7-7da5739fa15f/air-force-1-07-shoes-WrLlWX.png'
     ]
+  },
+  'nike-art-tee': {
+    id: 'shirt-1',
+    name: 'Nike Art-Tee',
+    category: 'Men\'s Running Shirt',
+    price: 90,
+    description: "Performance-driven running shirt designed for maximum comfort and style. Lightweight fabric with moisture-wicking technology keeps you cool during intense workouts.",
+    features: [
+      'Dri-FIT moisture-wicking fabric',
+      'Lightweight and breathable material',
+      'Athletic fit for enhanced mobility',
+      'Reflective details for low-light visibility',
+      'Flat seams to reduce chafing'
+    ],
+    colors: [
+      { name: 'Black', value: '#000000', accent: '#000000' },
+      { name: 'White', value: '#ffffff', accent: '#ffffff' },
+      { name: 'Grey', value: '#808080', accent: '#808080' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    mainImage: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ed291e67-4618-49ec-8dda-2c2221a5df41/dri-fit-adv-running-shirt-H3Klr9.png',
+    model: '/3d-models/NikeTee.glb',
+    images: [
+      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ed291e67-4618-49ec-8dda-2c2221a5df41/dri-fit-adv-running-shirt-H3Klr9.png',
+      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/8d7b7e67-1234-4ec8-9dda-2c2221a5bd23/dri-fit-adv-running-shirt-alternate.png',
+      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/4d9a7e67-5678-4ec8-9dda-2c2221a5cd45/dri-fit-adv-running-shirt-detail.png'
+    ]
+  },
+  'tech-fleece-hoodie': {
+    id: 'shirt-2',
+    name: 'Nike Sportswear Tech Fleece',
+    category: 'Men\'s Hoodie',
+    price: 110,
+    description: "Stay warm and stylish with the Nike Sportswear Tech Fleece Hoodie. Featuring lightweight, thermal fabric that provides exceptional warmth without bulk.",
+    features: [
+      'Tech Fleece fabric for lightweight warmth',
+      'Bonded seams for streamlined look',
+      'Zippered side pockets',
+      'Ribbed cuffs and hem',
+      'Adjustable hood with drawcord'
+    ],
+    colors: [
+      { name: 'Black', value: '#000000', accent: '#000000' },
+      { name: 'Dark Grey', value: '#404040', accent: '#404040' },
+      { name: 'Navy', value: '#000080', accent: '#000080' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    mainImage: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/0e103920-0d3d-4a05-9a1f-6c855f5e1210/sportswear-tech-fleece-hoodie-pcjXJm.png',
+    model: '/3d-models/TechFleeceHoodie.glb',
+    images: [
+      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/0e103920-0d3d-4a05-9a1f-6c855f5e1210/sportswear-tech-fleece-hoodie-pcjXJm.png',
+      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/2a103920-1234-4a05-9a1f-6c855f5e2345/sportswear-tech-fleece-hoodie-side.png',
+      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/3b103920-5678-4a05-9a1f-6c855f5e3456/sportswear-tech-fleece-hoodie-detail.png'
+    ]
+  },
+  'dri-fit-one': {
+    id: 'shirt-3',
+    name: 'Nike Dri-FIT One',
+    category: 'Women\'s Tank',
+    price: 35,
+    description: "Lightweight and breathable tank top designed for performance and comfort. Perfect for training, yoga, or everyday wear.",
+    features: [
+      'Dri-FIT moisture-wicking technology',
+      'Lightweight and soft fabric',
+      'Racerback design for enhanced mobility',
+      'Slim fit silhouette',
+      'Available in multiple colors'
+    ],
+    colors: [
+      { name: 'Black', value: '#000000', accent: '#000000' },
+      { name: 'White', value: '#ffffff', accent: '#ffffff' },
+      { name: 'Pink', value: '#FFC0CB', accent: '#FFC0CB' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    mainImage: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/a402ac0d-6506-44af-b684-ba60f94b7078/dri-fit-one-standard-fit-tank-n0ptps.png',
+    model: '/3d-models/DriFitOne.glb',
+    images: [
+      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/a402ac0d-6506-44af-b684-ba60f94b7078/dri-fit-one-standard-fit-tank-n0ptps.png',
+      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/b402ac0d-1234-4af-b684-ba60f94b7123/dri-fit-one-side-view.png',
+      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/c402ac0d-5678-4af-b684-ba60f94b7456/dri-fit-one-detail.png'
+    ]
   }
 };
 
@@ -78,7 +159,6 @@ const ProductDetail = () => {
   const [rotation, setRotation] = useState(0);
   const [isRotating, setIsRotating] = useState(false);
   const [scale, setScale] = useState(1);
-  const [selectedColor, setSelectedColor] = useState(0);
   const [selectedSize, setSelectedSize] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isInCart, setIsInCart] = useState(false);
@@ -365,7 +445,7 @@ const ProductDetail = () => {
                 <p>{product.description}</p>
               </div>
               
-              {/* Color selection */}
+              {/* Color selection
               <div className="mb-8 animate-item">
                 <h3 className="font-semibold mb-3">Select Color:</h3>
                 <div className="flex space-x-3">
@@ -384,7 +464,7 @@ const ProductDetail = () => {
                     </button>
                   ))}
                 </div>
-              </div>
+              </div> */}
               
               {/* Size selection */}
               <div className="mb-8 animate-item">

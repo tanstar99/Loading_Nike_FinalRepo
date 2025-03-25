@@ -165,7 +165,7 @@ const Dashboard = () => {
             </p>
           </div>
           
-          {/* Featured Banner */} 
+          {/* Featured Banner */}
           <div className="mb-12 bg-gradient-to-r from-gray-900 to-black rounded-2xl overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
               <div className="p-8 lg:col-span-3 flex flex-col justify-center">
