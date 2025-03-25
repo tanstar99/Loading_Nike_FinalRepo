@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
@@ -11,6 +10,7 @@ import Badge from '../components/ui/Badge';
 import Button from '../components/ui/Button';
 import { Checkbox } from '../components/ui/checkbox';
 import { toast } from 'sonner';
+import Product3DModel from '../components/ui/Product3DModel';
 
 // Sample product data
 const productData = {
@@ -34,6 +34,7 @@ const productData = {
     ],
     sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
     mainImage: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/5e4c1ce1-b014-4bf2-8edc-8ef6a3068e25/air-max-270-shoes-2V5C4p.png',
+    model: '/3d-models/NikeAM270.glb', // Add 3D model path
     images: [
       'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/5e4c1ce1-b014-4bf2-8edc-8ef6a3068e25/air-max-270-shoes-2V5C4p.png',
       'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/4f37fca4-6d7e-43c1-b342-9f1d14ef0a4a/air-max-270-shoes-2V5C4p.png',
@@ -61,6 +62,7 @@ const productData = {
     ],
     sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
     mainImage: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/e6da41fa-1be4-4ce5-b89c-22be4f1e9dc8/air-force-1-07-shoes-WrLlWX.png',
+    model: '/3d-models/NikeAF.glb',
     images: [
       'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/e6da41fa-1be4-4ce5-b89c-22be4f1e9dc8/air-force-1-07-shoes-WrLlWX.png',
       'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ff53c522-09a3-46c2-b652-75493ecc0de5/air-force-1-07-shoes-WrLlWX.png',
@@ -286,15 +288,23 @@ const ProductDetail = () => {
             <div className="relative">
               <div className="sticky top-32">
                 <div className="bg-gray-100 rounded-2xl p-8 mb-6 flex items-center justify-center h-[500px] relative">
-                  <img 
-                    ref={imageRef}
-                    src={product.images[selectedImageIndex]} 
-                    alt={product.name} 
-                    className="hoverable max-h-full max-w-full object-contain transition-all duration-300"
+                  {/* Replace static image with 3D model */}
+                  <div 
+                    ref={imageRef} 
+                    className="max-h-full max-w-full object-contain transition-all duration-300"
                     style={{ 
                       transform: `scale(${scale}) rotate(${rotation}deg)`,
                     }}
-                  />
+                  >
+                    <Product3DModel 
+                      modelPath={product.model} 
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        transform: `scale(${scale}) rotate(${rotation}deg)` 
+                      }} 
+                    />
+                  </div>
                   
                   {/* 3D controls */}
                   <div className="absolute top-4 right-4 flex flex-col space-y-3">
